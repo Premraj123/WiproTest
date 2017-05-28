@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.mkyong.common.domain.Univ" table="univ" catalog="mkyong">
+		<id name="alpha_two_code" type="java.lang.Integer">
+			<column name="CODE" />
+			<generator class="identity" />
+		</id>
+		<property name="country" type="string">
+			<column name="COUNTRY" length="10" not-null="true" unique="true" />
+		</property>
+		<property name="domain" type="string">
+			<column name="DOMAIN" length="20" not-null="true" unique="true" />
+		</property>
+		<property name="name" type="string">
+			<column name="NAME" length="20" not-null="true" unique="true" />
+		</property>
+		<property name="web_page" type="string">
+			<column name="WEB_PAGE" length="20" not-null="true" unique="true" />
+		</property>
+	</class>
+</hibernate-mapping>
